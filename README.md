@@ -1,58 +1,103 @@
-# Bill-Book-
-Biling Related Register 
 <!DOCTYPE html>
 <html lang="hi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>फीस रिमाइंडर व ऑटो-बिलिंग पोर्टल - LUCENT COACHING CENTRE</title>
+  <title>FEE BILL BOOK - LUCENT COACHING CENTRE</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Roboto', sans-serif; }
-    body { background-color: #cbd5e1; color: #0f172a; padding: 20px 10px; }
+    body { background-color: #cbd5e1; color: #0f172a; padding: 25px 12px; }
 
-    /* RECTANGULAR SHARP DESIGN */
-    .portal-card {
-      max-width: 680px;
+    /* RECTANGLE CONTAINER */
+    .bill-portal-card {
+      max-width: 720px;
       margin: 0 auto;
       background: #ffffff;
-      border: 3px solid #002244;
+      border: 3px solid #000000;
       border-radius: 0px;
-      box-shadow: 7px 7px 0px rgba(0, 34, 68, 0.9);
+      box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.85);
     }
 
+    /* HEADER */
     .portal-header {
-      background: #002b49;
-      color: #ffffff;
-      padding: 16px 20px;
+      background: #ffffff;
+      color: #000000;
+      padding: 22px 18px 16px;
       text-align: center;
-      border-bottom: 3px solid #002244;
+      border-bottom: 3px solid #000000;
     }
+
+    /* 36PX TIMES NEW ROMAN BLACK BOLD */
     .portal-header h1 {
-      font-size: 18px;
-      font-weight: 900;
+      font-family: 'Times New Roman', Times, serif !important;
+      font-size: 36px !important;
+      font-weight: 900 !important;
+      color: #000000 !important;
+      letter-spacing: 0.5px;
+      line-height: 1.15;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .portal-header .inst-address {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 4px;
+    }
+
+    .portal-header .inst-contact {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    .leadership-strip {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 6px;
+    }
+    .leader-badge {
+      background: #f1f5f9;
+      border: 1.5px solid #0f172a;
+      padding: 4px 12px;
+      font-size: 12px;
+      font-weight: 800;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-strip-sub {
+      background: #002244;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 5px 14px;
+      display: inline-block;
+      margin-top: 10px;
       letter-spacing: 0.5px;
       text-transform: uppercase;
     }
-    .portal-header p {
-      font-size: 12.5px;
-      color: #38bdf8;
-      margin-top: 4px;
-      font-weight: 600;
-    }
 
-    .portal-body { padding: 20px; }
+    .portal-body { padding: 22px; }
 
     .grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-bottom: 12px;
+      gap: 14px;
+      margin-bottom: 14px;
     }
     .grid-3 {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 10px;
+      gap: 12px;
       margin-bottom: 14px;
     }
 
@@ -67,7 +112,7 @@ Biling Related Register
     .form-cell input, .form-cell select {
       width: 100%;
       padding: 10px 12px;
-      font-size: 13.5px;
+      font-size: 14px;
       border: 2px solid #334155;
       border-radius: 0px;
       background: #ffffff;
@@ -80,24 +125,23 @@ Biling Related Register
       background: #f0f9ff;
     }
 
-    /* BADA DROP-DOWN FOR MONTH */
     .month-select-large {
-      padding: 12px 14px !important;
-      font-size: 16px !important;
+      padding: 11px 12px !important;
+      font-size: 15px !important;
       font-weight: 800 !important;
-      color: #003366 !important;
-      cursor: pointer;
-      border: 2.5px solid #003366 !important;
+      color: #000000 !important;
+      border: 2px solid #000000 !important;
       background: #f8fafc !important;
+      cursor: pointer;
     }
 
-    /* CALCULATION BAR */
+    /* CALCULATION SUMMARY BAR */
     .calc-bar {
       background: #f8fafc;
-      border: 2px solid #0284c7;
+      border: 2px solid #000000;
       border-radius: 0px;
       padding: 12px 14px;
-      margin: 15px 0;
+      margin: 16px 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -105,8 +149,8 @@ Biling Related Register
       gap: 10px;
     }
     .calc-details {
-      font-size: 12px;
-      color: #475569;
+      font-size: 12.5px;
+      color: #334155;
       font-weight: 700;
     }
     .calc-total {
@@ -121,20 +165,47 @@ Biling Related Register
     }
     .calc-total strong {
       font-size: 24px;
-      color: #dc2626;
+      color: #b91c1c;
       font-weight: 900;
     }
 
-    /* PHONEPE DETAILS BOX */
-    .payment-box {
+    /* PHONEPE DETAILS & QR */
+    .payment-qr-container {
       background: #faf5ff;
       border: 2px dashed #9333ea;
-      border-radius: 0px;
-      padding: 10px 12px;
-      margin-bottom: 15px;
-      font-size: 12.5px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
     }
-    .payment-box strong { color: #581c87; }
+    .payment-qr-info {
+      font-size: 13px;
+      color: #3b0764;
+      line-height: 1.6;
+    }
+    .payment-qr-info strong { color: #581c87; }
+    .qr-img-box {
+      text-align: center;
+      background: #ffffff;
+      padding: 5px;
+      border: 1.5px solid #c084fc;
+    }
+    .qr-img-box img {
+      width: 105px;
+      height: 105px;
+      display: block;
+      object-fit: contain;
+    }
+    .qr-img-box span {
+      font-size: 9.5px;
+      font-weight: 800;
+      color: #6b21a8;
+      display: block;
+      margin-top: 2px;
+    }
 
     /* PREVIEW */
     .preview-box {
@@ -146,32 +217,40 @@ Biling Related Register
       line-height: 1.6;
       color: #1e293b;
       white-space: pre-wrap;
-      margin-bottom: 16px;
-      max-height: 200px;
+      margin-bottom: 18px;
+      max-height: 180px;
       overflow-y: auto;
     }
 
-    /* DUAL ACTION BUTTONS */
+    /* ACTION BUTTONS */
     .button-group-row {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
     }
 
     .btn-action {
       width: 100%;
       border-radius: 0px;
-      padding: 14px;
-      font-size: 15px;
+      padding: 13px 8px;
+      font-size: 13px;
       font-weight: 900;
       cursor: pointer;
       text-transform: uppercase;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 6px;
       transition: all 0.1s ease;
     }
+
+    .btn-print {
+      background: #0f172a;
+      color: #ffffff;
+      border: 2px solid #000000;
+      box-shadow: 4px 4px 0px #000000;
+    }
+    .btn-print:hover { background: #1e293b; transform: translate(1px, 1px); }
 
     .btn-whatsapp {
       background: #16a34a;
@@ -179,11 +258,7 @@ Biling Related Register
       border: 2px solid #14532d;
       box-shadow: 4px 4px 0px #14532d;
     }
-    .btn-whatsapp:hover {
-      background: #15803d;
-      transform: translate(1px, 1px);
-      box-shadow: 3px 3px 0px #14532d;
-    }
+    .btn-whatsapp:hover { background: #15803d; transform: translate(1px, 1px); }
 
     .btn-sms {
       background: #0284c7;
@@ -191,131 +266,309 @@ Biling Related Register
       border: 2px solid #0369a1;
       box-shadow: 4px 4px 0px #0369a1;
     }
-    .btn-sms:hover {
-      background: #0369a1;
-      transform: translate(1px, 1px);
-      box-shadow: 3px 3px 0px #0369a1;
-    }
+    .btn-sms:hover { background: #0369a1; transform: translate(1px, 1px); }
 
     .btn-action:active {
-      transform: translate(4px, 4px);
+      transform: translate(3px, 3px);
       box-shadow: none;
     }
 
-    @media (max-width: 600px) {
+    /* ================= PRINT / PDF INVOICE BILL ================= */
+    #billPrintArea { display: none; }
+
+    @media print {
+      body * { visibility: hidden; }
+      #billPrintArea, #billPrintArea * { visibility: visible; }
+      #billPrintArea {
+        display: block !important;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: 20px;
+        background: #ffffff;
+        color: #000000;
+      }
+      .bill-paper {
+        border: 2.5px solid #000000;
+        padding: 20px;
+        max-width: 620px;
+        margin: 0 auto;
+      }
+      .bill-head {
+        text-align: center;
+        border-bottom: 2px solid #000000;
+        padding-bottom: 10px;
+        margin-bottom: 12px;
+      }
+      .bill-head h2 {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 28px;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+        font-weight: 900;
+        color: #000000;
+      }
+      .bill-head p {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 1.4;
+      }
+      .bill-leaders {
+        font-size: 11px;
+        font-weight: bold;
+        margin-top: 5px;
+        text-transform: uppercase;
+      }
+      .bill-meta {
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+        font-weight: bold;
+        margin-bottom: 12px;
+        border-bottom: 1px dashed #000000;
+        padding-bottom: 6px;
+      }
+      .bill-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 12px;
+      }
+      .bill-table th, .bill-table td {
+        border: 1px solid #000000;
+        padding: 8px 10px;
+        font-size: 13px;
+        text-align: left;
+      }
+      .bill-table th { background: #f8fafc; width: 42%; }
+      .bill-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: 35px;
+      }
+      .bill-sign {
+        border-top: 1.5px solid #000000;
+        width: 170px;
+        text-align: center;
+        font-size: 11.5px;
+        font-weight: bold;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .portal-header h1 { font-size: 28px !important; }
       .grid-2, .grid-3, .button-group-row { grid-template-columns: 1fr; }
       .calc-bar { flex-direction: column; align-items: flex-start; }
       .calc-total { text-align: left; }
+      .payment-qr-container { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
 <body>
 
-  <div class="portal-card">
+  <div class="bill-portal-card">
+    <!-- HEADER -->
     <div class="portal-header">
-      <h1>LUCENT COACHING CENTRE MUSRIGHARARI</h1>
-      <p>छात्र फीस प्रबंधन एवं बिलिंग सिस्टम</p>
+      <h1>LUCENT COACHING CENTRE</h1>
+      <div class="inst-address">
+        Near Mithila Eye Hospital, Musrigharari, Samastipur (Bihar) - 848211[span_2](start_span)[span_2](end_span)
+      </div>
+      <div class="inst-contact">
+        Contact / Helpline: <strong>+91 8789524958</strong>[span_3](start_span)[span_3](end_span)
+      </div>
+      <div class="leadership-strip">
+        <div class="leader-badge">Director: <strong>Md Mahfooz Alam</strong>[span_4](start_span)[span_4](end_span)</div>
+        <div class="leader-badge">Managing Director: <strong>Md Nazir</strong></div>
+      </div>
+      <div>
+        <div class="badge-strip-sub">★ OFFICIAL STUDENT FEE BILL BOOK ★</div>
+      </div>
     </div>
 
     <div class="portal-body">
       <!-- 1. Student Selection -->
       <div class="grid-2">
         <div class="form-cell">
-          <label>छात्र चुनें (OkCredit लिस्ट से):</label>
+          <label>छात्र चुनें (Student Dropdown) *</label>
           <select id="studentSelect" onchange="onStudentSelectChange()">
             <option value="">-- छात्र का नाम चुनें --</option>
           </select>
         </div>
         <div class="form-cell">
-          <label>छात्र का नाम (एडिट योग्य):</label>
-          <input type="text" id="studentName" placeholder="छात्र का नाम" oninput="calculateTotal()">
+          <label>Student Full Name:</label>
+          <input type="text" id="studentName" placeholder="छात्र का नाम" oninput="calculateBill()">
         </div>
       </div>
 
       <!-- 2. Phone & Class -->
       <div class="grid-2">
         <div class="form-cell">
-          <label>अभिभावक का मोबाइल नंबर:</label>
+          <label>Parents Mobile Number *</label>
           <input type="tel" id="parentPhone" placeholder="10 अंकों का मोबाइल नंबर">
         </div>
         <div class="form-cell">
-          <label>कक्षा / सेक्शन (Class):</label>
-          <input type="text" id="studentClass" value="12th" oninput="calculateTotal()">
+          <label>Class / Course *</label>
+          <input type="text" id="studentClass" value="12th" oninput="calculateBill()">
         </div>
       </div>
 
-      <!-- 3. Month Dropdown (English & Large) -->
-      <div class="form-cell" style="margin-bottom: 14px;">
-        <label>SELECT FEE MONTH (महीना चुनें):</label>
-        <select id="feeMonth" class="month-select-large" onchange="calculateTotal()">
-          <option value="January 2026">January 2026</option>
-          <option value="February 2026">February 2026</option>
-          <option value="March 2026">March 2026</option>
-          <option value="April 2026">April 2026</option>
-          <option value="May 2026">May 2026</option>
-          <option value="June 2026">June 2026</option>
-          <option value="July 2026">July 2026</option>
-          <option value="August 2026">August 2026</option>
-          <option value="September 2026" selected>September 2026</option>
-          <option value="October 2026">October 2026</option>
-          <option value="November 2026">November 2026</option>
-          <option value="December 2026">December 2026</option>
-        </select>
+      <!-- 3. Month & Bill Date -->
+      <div class="grid-2">
+        <div class="form-cell">
+          <label>Fee Month (बिल का महीना) *</label>
+          <select id="feeMonth" class="month-select-large" onchange="calculateBill()">
+            <option value="January 2026">January 2026</option>
+            <option value="February 2026">February 2026</option>
+            <option value="March 2026">March 2026</option>
+            <option value="April 2026">April 2026</option>
+            <option value="May 2026">May 2026</option>
+            <option value="June 2026">June 2026</option>
+            <option value="July 2026">July 2026</option>
+            <option value="August 2026">August 2026</option>
+            <option value="September 2026" selected>September 2026</option>
+            <option value="October 2026">October 2026</option>
+            <option value="November 2026">November 2026</option>
+            <option value="December 2026">December 2026</option>
+          </select>
+        </div>
+        <div class="form-cell">
+          <label>Bill Date (बिल जारी दिनांक) *</label>
+          <input type="date" id="billDate" onchange="calculateBill()">
+        </div>
       </div>
 
-      <!-- 4. Dynamic Math Row: Prev + Curr - Minus -->
+      <!-- 4. Fee Calculation -->
       <div class="grid-3">
         <div class="form-cell">
-          <label>पिछला बकाया (+ ₹):</label>
-          <input type="number" id="prevDues" value="0" min="0" oninput="calculateTotal()">
+          <label>Previous Due (पिछला बकाया ₹):</label>
+          <input type="number" id="prevDues" value="0" min="0" oninput="calculateBill()">
         </div>
         <div class="form-cell">
-          <label>चालू माह शुल्क (+ ₹):</label>
-          <input type="number" id="currDues" value="450" min="0" oninput="calculateTotal()">
+          <label>Current Fee (चालू शुल्क ₹) *</label>
+          <input type="number" id="currDues" value="450" min="0" oninput="calculateBill()">
         </div>
         <div class="form-cell">
-          <label>छूट / अग्रिम (- ₹):</label>
-          <input type="number" id="discountPaid" value="0" min="0" oninput="calculateTotal()">
+          <label>Discount / Paid (- ₹):</label>
+          <input type="number" id="discountPaid" value="0" min="0" oninput="calculateBill()">
         </div>
       </div>
 
-      <!-- Math Summary Box -->
+      <!-- Total Summary Bar -->
       <div class="calc-bar">
         <div class="calc-details" id="mathBreakdown">
-          गणना: ₹0 (बकाया) + ₹450 (माह शुल्क) - ₹0 (छूट)
+          विवरण: ₹0 (बकाया) + ₹450 (माह शुल्क) - ₹0 (छूट/अग्रिम)
         </div>
         <div class="calc-total">
-          <span>कुल देय राशि (Total Payable)</span>
+          <span>कुल बिल राशि (Total Bill Amount)</span>
           <strong id="totalPayableText">₹ 450</strong>
         </div>
       </div>
 
-      <!-- PhonePe Payment Info -->
-      <div class="payment-box">
-        <strong>🟣 PhonePe / UPI भुगतान विवरण:</strong><br>
-        नाम: <b>Md Mahfooz</b> | PhonePe: <b>8789524958</b> | UPI: <b>8789524958-2@ibl</b>
+      <!-- PhonePe Details & QR Section -->
+      <div class="payment-qr-container">
+        <div class="payment-qr-info">
+          <strong>🟣 PhonePe / UPI भुगतान विवरण:</strong><br>
+          नाम: <b>Md Mahfooz</b>[span_5](start_span)[span_5](end_span)<br>
+          PhonePe No: <b>8789524958</b>[span_6](start_span)[span_6](end_span)[span_7](start_span)[span_7](end_span)<br>
+          UPI ID: <b>8789524958-2@ibl</b>[span_8](start_span)[span_8](end_span)
+        </div>
+        <div class="qr-img-box">
+          <img src="1000187436.jpg" alt="PhonePe QR" onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=8789524958-2@ibl%26pn=Md%20Mahfooz';">[span_9](start_span)[span_9](end_span)[span_10](start_span)[span_10](end_span)
+          <span>SCAN TO PAY</span>
+        </div>
       </div>
 
-      <!-- Preview Box -->
+      <!-- Message Preview -->
       <label style="font-size: 11px; font-weight: 800; color: #475569; text-transform: uppercase; margin-bottom: 4px; display: block;">
-        लाइव मेसेज प्रीव्यू (यही मेसेज भेजा जाएगा):
+        बिल मेसेज प्रीव्यू (WhatsApp / SMS):
       </label>
       <div class="preview-box" id="messagePreview"></div>
 
-      <!-- Action Buttons: WhatsApp & Normal Message -->
+      <!-- Buttons -->
       <div class="button-group-row">
-        <button type="button" class="btn-action btn-whatsapp" onclick="sendMessage('whatsapp')">
-          <span>💬</span> WhatsApp पर भेजें
+        <button type="button" class="btn-action btn-print" onclick="printBillPDF()">
+          <span>🖨️</span> प्रिंट / PDF बिल[span_11](start_span)[span_11](end_span)
         </button>
-        <button type="button" class="btn-action btn-sms" onclick="sendMessage('sms')">
-          <span>✉️</span> SMS (संदेश) भेजें
+        <button type="button" class="btn-action btn-whatsapp" onclick="sendBillMessage('whatsapp')">
+          <span>💬</span> WhatsApp पर बिल भेजें[span_12](start_span)[span_12](end_span)
+        </button>
+        <button type="button" class="btn-action btn-sms" onclick="sendBillMessage('sms')">
+          <span>✉️</span> SMS पर बिल भेजें[span_13](start_span)[span_13](end_span)
         </button>
       </div>
     </div>
   </div>
 
+  <!-- PRINT / PDF BILL TEMPLATE -->
+  <div id="billPrintArea">
+    <div class="bill-paper">
+      <div class="bill-head">
+        <h2>LUCENT COACHING CENTRE</h2>
+        <p>Near Mithila Eye Hospital, Musrigharari, Samastipur (Bihar)[span_14](start_span)[span_14](end_span)</p>
+        <p>Contact / Helpline: <strong>+91 8789524958</strong>[span_15](start_span)[span_15](end_span)</p>
+        <div class="bill-leaders">
+          Director: <strong>Md Mahfooz Alam</strong> | Managing Director: <strong>Md Nazir</strong>[span_16](start_span)[span_16](end_span)
+        </div>
+        <div style="font-weight: bold; margin-top: 6px; font-size: 13px; text-transform: uppercase;">
+          ★ आधिकारिक शिक्षण शुल्क बिल (STUDENT FEE INVOICE) ★[span_17](start_span)[span_17](end_span)
+        </div>
+      </div>
+
+      <div class="bill-meta">
+        <div>बिल सं. (Bill No): <span id="billNo">LCC-BILL-501</span></div>
+        <div>दिनांक (Date): <span id="billDateDisplay">26/09/2026</span></div>
+      </div>
+
+      <table class="bill-table">
+        <tr>
+          <th>विद्यार्थी का नाम:</th>
+          <td id="bStudentName">Rahul Kumar</td>
+        </tr>
+        <tr>
+          <th>कक्षा / बैच (Class):</th>
+          <td id="bClass">12th</td>
+        </tr>
+        <tr>
+          <th>अभिभावक संपर्क नंबर:</th>
+          <td id="bPhone">9876543210</td>
+        </tr>
+        <tr>
+          <th>बिल का महीना:</th>
+          <td id="bMonth">September 2026</td>
+        </tr>
+        <tr>
+          <th>पिछला बकाया शुल्क (Previous Due):</th>
+          <td id="bPrevDue">₹0</td>
+        </tr>
+        <tr>
+          <th>चालू माह शुल्क (Monthly Fee):</th>
+          <td id="bCurrFee">₹450</td>
+        </tr>
+        <tr>
+          <th>छूट / अग्रिम समायोजन:</th>
+          <td id="bDiscount">₹0</td>
+        </tr>
+        <tr style="background: #f8fafc; font-weight: bold;">
+          <th>कुल देय राशि (Total Amount Due):</th>
+          <td id="bTotalPayable" style="font-size: 15px; color: #b91c1c;">₹450</td>
+        </tr>
+      </table>
+
+      <div style="font-size: 11px; margin-top: 6px; color: #333;">
+        * ऑनलाइन भुगतान: PhonePe No. <strong>8789524958</strong> (UPI: <strong>8789524958-2@ibl</strong>)[span_18](start_span)[span_18](end_span)
+      </div>
+
+      <div class="bill-footer">
+        <div style="font-size: 11px;">Issued by: Lucent Office</div>
+        <div class="bill-sign">प्राधिकृत हस्ताक्षर / मुहर</div>
+      </div>
+    </div>
+  </div>
+
   <script>
-    // Sirf Naam aur Mobile Number (Bakaya hata diya gaya hai)
+    // OkCredit Student List[span_19](start_span)[span_19](end_span)
     const studentsData = [
       { name: "AMJAD ALAM", phone: "9955684664" },
       { name: "ANAMIKA KRI", phone: "7257054499" },
@@ -375,12 +628,27 @@ Biling Related Register
       { name: "VERSA KRI", phone: "7255032487" }
     ];
 
+    function setDefaultDate() {
+      const today = new Date();
+      const yyyy = today.getFullYear();
+      const mm = String(today.getMonth() + 1).padStart(2, '0');
+      const dd = String(today.getDate()).padStart(2, '0');
+      document.getElementById('billDate').value = `${yyyy}-${mm}-${dd}`;
+    }
+
+    function getFormattedSelectedDate() {
+      const val = document.getElementById('billDate').value;
+      if (!val) return "";
+      const p = val.split('-');
+      return `${p[2]}/${p[1]}/${p[0]}`;
+    }
+
     function populateDropdown() {
       const select = document.getElementById('studentSelect');
       studentsData.forEach((st, idx) => {
         const opt = document.createElement('option');
         opt.value = idx;
-        opt.textContent = `${st.name} (${st.phone || 'No Number'})`;
+        opt.textContent = `${st.name} (${st.phone || 'No Phone'})`;
         select.appendChild(opt);
       });
     }
@@ -395,19 +663,10 @@ Biling Related Register
         document.getElementById('prevDues').value = 0;
         document.getElementById('discountPaid').value = 0;
       }
-      calculateTotal();
+      calculateBill();
     }
 
-    function getDueDate10DaysLater() {
-      const date = new Date();
-      date.setDate(date.getDate() + 10);
-      const day = String(date.getDate()).padStart(2, '0');
-      const month = String(date.getMonth() + 1).padStart(2, '0');
-      const year = date.getFullYear();
-      return `${day}/${month}/${year}`;
-    }
-
-    function calculateTotal() {
+    function calculateBill() {
       const prev = parseFloat(document.getElementById('prevDues').value) || 0;
       const curr = parseFloat(document.getElementById('currDues').value) || 0;
       const minus = parseFloat(document.getElementById('discountPaid').value) || 0;
@@ -416,81 +675,116 @@ Biling Related Register
       if (netPayable < 0) netPayable = 0;
 
       document.getElementById('mathBreakdown').innerText = 
-        `गणना: ₹${prev} (बकाया) + ₹${curr} (माह शुल्क) - ₹${minus} (छूट/अग्रिम)`;
+        `विवरण: ₹${prev} (बकाया) + ₹${curr} (माह शुल्क) - ₹${minus} (छूट/अग्रिम)`;
       document.getElementById('totalPayableText').innerText = `₹ ${netPayable}`;
 
       const name = document.getElementById('studentName').value.trim() || "[विद्यार्थी का नाम]";
       const sClass = document.getElementById('studentClass').value.trim() || "12th";
       const month = document.getElementById('feeMonth').value;
-      const dueDate = getDueDate10DaysLater();
+      const bDate = getFormattedSelectedDate();
 
       let discountLine = "";
       if (minus > 0) {
-        discountLine = `▫️ दी गई छूट / प्राप्त राशि: -₹${minus}\n`;
+        discountLine = `▫️ छूट / अग्रिम समायोजन: -₹${minus}\n`;
       }
 
       const message = 
-`*सादर प्रणाम (मासिक फीस सूचना)* 🙏
-*संस्थान:* LUCENT COACHING CENTRE MUSRIGHARARI
+`*मासिक शिक्षण शुल्क बिल (FEE BILL)* 📄
+*संस्थान:* LUCENT COACHING CENTRE[span_20](start_span)[span_20](end_span)
+*पता:* Near Mithila Eye Hospital, Musrigharari[span_21](start_span)[span_21](end_span)
+*Helpline:* +91 8789524958[span_22](start_span)[span_22](end_span)
+*Director:* Md Mahfooz Alam | *MD:* Md Nazir[span_23](start_span)[span_23](end_span)
 
-माननीय अभिभावक, आपके बच्चे *${name}* (कक्षा: *${sClass}*) का मासिक शिक्षण शुल्क विवरण निम्नलिखित है:
+सादर प्रणाम, आपके बच्चे का मासिक फीस विवरण निम्नलिखित है:
 
+▫️ विद्यार्थी का नाम: *${name}*
+▫️ कक्षा (Class): *${sClass}*
+▫️ बिल का महीना: *${month}*
+▫️ बिल दिनांक: *${bDate}*
+--------------------------------
 ▫️ पिछला बकाया शुल्क: ₹${prev}
-▫️ चालू माह शुल्क (${month}): ₹${curr}
+▫️ चालू माह शुल्क: ₹${curr}
 ${discountLine}--------------------------------
-*कुल देय राशि: ₹${netPayable}*
+*कुल देय बिल राशि: ₹${netPayable}*
 --------------------------------
 
 💳 *ऑनलाइन भुगतान (PhonePe / UPI):*
-• नाम: *Md Mahfooz*
-• PhonePe नंबर: *8789524958*
-• UPI ID: *8789524958-2@ibl*
+• नाम: *Md Mahfooz*[span_24](start_span)[span_24](end_span)
+• PhonePe नंबर: *8789524958*[span_25](start_span)[span_25](end_span)[span_26](start_span)[span_26](end_span)
+• UPI ID: *8789524958-2@ibl*[span_27](start_span)[span_27](end_span)
 *(ऑनलाइन भुगतान के बाद कृपया स्क्रीनशॉट इसी नंबर पर भेजें)*
 
-⚠️ *अनुरोध:* आपसे सविनय निवेदन है कि संस्थान के पठन-पाठन कार्य को सुचारू रूप से चलाने हेतु आगामी *10 दिनों के अंदर (दिनांक: ${dueDate} तक)* इस बकाया शुल्क को जमा कराने की कृपा करें।
-
-यदि आपने यह शुल्क पहले ही जमा कर दिया है, तो कृपया इस संदेश को अनदेखा करें।
-
 धन्यवाद,
-*LUCENT COACHING CENTRE MUSRIGHARARI*`;
+*LUCENT COACHING CENTRE MUSRIGHARARI*[span_28](start_span)[span_28](end_span)`;
 
       document.getElementById('messagePreview').innerText = message;
-      return { message, netPayable };
+      return { message, netPayable, prev, curr, minus, name, sClass, month, bDate };
     }
 
-    function sendMessage(type) {
-      let rawPhone = document.getElementById('parentPhone').value.trim();
-      const name = document.getElementById('studentName').value.trim();
-
-      if (!name) {
-        alert("कृपया छात्र का नाम चुनें या दर्ज करें!");
+    // PRINT / PDF BILL[span_29](start_span)[span_29](end_span)
+    function printBillPDF() {
+      const data = calculateBill();
+      if (!document.getElementById('studentName').value.trim()) {
+        alert("कृपया पहले छात्र का नाम चुनें!");
         return;
       }
-      if (!rawPhone) {
+
+      document.getElementById('billNo').innerText = 'LCC-BILL-' + Math.floor(100 + Math.random() * 900);
+      document.getElementById('billDateDisplay').innerText = data.bDate;
+      document.getElementById('bStudentName').innerText = data.name;
+      document.getElementById('bClass').innerText = data.sClass;
+      document.getElementById('bPhone').innerText = document.getElementById('parentPhone').value.trim() || 'N/A';
+      document.getElementById('bMonth').innerText = data.month;
+      document.getElementById('bPrevDue').innerText = `₹${data.prev}`;
+      document.getElementById('bCurrFee').innerText = `₹${data.curr}`;
+      document.getElementById('bDiscount').innerText = `₹${data.minus}`;
+      document.getElementById('bTotalPayable').innerText = `₹${data.netPayable}`;
+
+      window.print();
+    }
+
+    // SEND BILL VIA WHATSAPP OR SMS[span_30](start_span)[span_30](end_span)
+    function sendBillMessage(type) {
+      const data = calculateBill();
+      let phone = document.getElementById('parentPhone').value.trim();
+
+      if (!document.getElementById('studentName').value.trim()) {
+        alert("कृपया पहले छात्र का नाम चुनें!");
+        return;
+      }
+      if (!phone) {
         alert("कृपया अभिभावक का मोबाइल नंबर दर्ज करें!");
         return;
       }
 
-      let cleanPhone = rawPhone.replace(/[^0-9]/g, '');
-      const { message } = calculateTotal();
+      let cleanPhone = phone.replace(/[^0-9]/g, '');
 
       if (type === 'whatsapp') {
         let waNumber = cleanPhone;
         if (waNumber.length === 10) {
           waNumber = '91' + waNumber;
         }
-        const whatsappURL = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
-        window.open(whatsappURL, '_blank');
+        const waURL = `https://wa.me/${waNumber}?text=${encodeURIComponent(data.message)}`;
+        window.open(waURL, '_blank');[span_31](start_span)[span_31](end_span)
       } else if (type === 'sms') {
-        const plainMsg = message.replace(/\*/g, '');
+        const plainMsg = 
+`फीस बिल (LUCENT COACHING CENTRE):
+छात्र: ${data.name} (${data.sClass})
+माह: ${data.month}
+दिनांक: ${data.bDate}
+कुल देय बिल: Rs.${data.netPayable}
+PhonePe: 8789524958 (Md Mahfooz)
+संपर्क: 8789524958[span_32](start_span)[span_32](end_span)[span_33](start_span)[span_33](end_span)[span_34](start_span)[span_34](end_span)`;
+
         const smsURL = `sms:${cleanPhone}?body=${encodeURIComponent(plainMsg)}`;
-        window.location.href = smsURL;
+        window.location.href = smsURL;[span_35](start_span)[span_35](end_span)
       }
     }
 
     window.onload = function() {
+      setDefaultDate();
       populateDropdown();
-      calculateTotal();
+      calculateBill();
     };
   </script>
 </body>
