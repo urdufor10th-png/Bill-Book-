@@ -3,47 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LUCENT COACHING CENTRE - Fee Bill Portal</title>
+  <title>LUCENT COACHING CENTRE - Bill Book System</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  
+  <!-- CSS STYLING -->
   <style>
+    :root {
+      --primary-black: #000000;
+      --navy-blue: #002244;
+      --bg-slate: #cbd5e1;
+      --card-bg: #ffffff;
+      --border-dark: #334155;
+      --danger-red: #b91c1c;
+      --success-green: #15803d;
+      --phonepe-purple: #6b21a8;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
       font-family: 'Roboto', sans-serif;
     }
+
     body {
-      background-color: #cbd5e1;
+      background-color: var(--bg-slate);
       color: #0f172a;
-      padding: 20px 10px;
+      padding: 25px 12px;
     }
 
-    /* MAIN SHARP CARD */
+    /* MAIN RECTANGULAR CARD */
     .bill-wrapper {
       max-width: 740px;
       margin: 0 auto;
-      background: #ffffff;
-      border: 3px solid #000000;
+      background: var(--card-bg);
+      border: 3px solid var(--primary-black);
+      border-radius: 0px;
       box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.85);
     }
 
     /* HEADER */
     .bill-header {
-      background: #ffffff;
+      background: var(--card-bg);
       padding: 24px 18px 18px;
       text-align: center;
-      border-bottom: 3px solid #000000;
+      border-bottom: 3px solid var(--primary-black);
     }
+
+    /* 36PX TIMES NEW ROMAN BLACK BOLD */
     .bill-header h1 {
       font-family: 'Times New Roman', Times, serif !important;
       font-size: 36px !important;
       font-weight: 900 !important;
-      color: #000000 !important;
+      color: var(--primary-black) !important;
       letter-spacing: 0.5px;
       line-height: 1.15;
       text-transform: uppercase;
       margin-bottom: 6px;
     }
+
     .bill-header .inst-sub {
       font-family: 'Times New Roman', Times, serif;
       font-size: 15px;
@@ -51,6 +69,7 @@
       color: #1e293b;
       margin-bottom: 4px;
     }
+
     .bill-header .inst-phone {
       font-family: 'Times New Roman', Times, serif;
       font-size: 15px;
@@ -58,6 +77,7 @@
       color: #0f172a;
       margin-bottom: 10px;
     }
+
     .leader-row {
       display: flex;
       justify-content: center;
@@ -65,6 +85,7 @@
       gap: 10px;
       margin-top: 6px;
     }
+
     .leader-badge {
       background: #f1f5f9;
       border: 1.5px solid #0f172a;
@@ -75,10 +96,11 @@
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
+
     .badge-sub {
-      background: #002244;
+      background: var(--navy-blue);
       color: #ffffff;
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 800;
       padding: 5px 14px;
       display: inline-block;
@@ -91,22 +113,26 @@
     .bill-body {
       padding: 22px;
     }
+
     .grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 14px;
       margin-bottom: 14px;
     }
+
     .grid-3 {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 12px;
       margin-bottom: 14px;
     }
+
     .field-box {
       display: flex;
       flex-direction: column;
     }
+
     .field-box label {
       font-size: 12px;
       font-weight: 800;
@@ -114,35 +140,42 @@
       margin-bottom: 5px;
       text-transform: uppercase;
     }
-    .field-box input, .field-box select {
+
+    .field-box input,
+    .field-box select {
       width: 100%;
       padding: 10px 12px;
       font-size: 14px;
-      border: 2px solid #334155;
+      border: 2px solid var(--border-dark);
+      border-radius: 0px;
       background: #ffffff;
       color: #0f172a;
       outline: none;
       font-weight: 600;
-      border-radius: 0;
+      transition: all 0.2s ease;
     }
-    .field-box input:focus, .field-box select:focus {
+
+    .field-box input:focus,
+    .field-box select:focus {
       border-color: #0284c7;
       background: #f0f9ff;
     }
+
     .month-select-lg {
       padding: 11px 12px !important;
       font-size: 15px !important;
       font-weight: 800 !important;
-      color: #000000 !important;
-      border: 2px solid #000000 !important;
+      color: var(--primary-black) !important;
+      border: 2px solid var(--primary-black) !important;
       background: #f8fafc !important;
       cursor: pointer;
     }
 
-    /* MATH BAR */
+    /* REALTIME CALCULATION BAR */
     .math-bar {
       background: #f8fafc;
-      border: 2px solid #000000;
+      border: 2px solid var(--primary-black);
+      border-radius: 0px;
       padding: 14px;
       margin: 16px 0;
       display: flex;
@@ -151,31 +184,36 @@
       flex-wrap: wrap;
       gap: 10px;
     }
+
     .math-bar .math-desc {
       font-size: 12.5px;
       color: #334155;
       font-weight: 700;
     }
+
     .math-bar .math-total {
       text-align: right;
     }
+
     .math-bar .math-total span {
       font-size: 11px;
       font-weight: 800;
-      color: #003366;
+      color: var(--navy-blue);
       display: block;
       text-transform: uppercase;
     }
+
     .math-bar .math-total strong {
       font-size: 24px;
-      color: #b91c1c;
+      color: var(--danger-red);
       font-weight: 900;
     }
 
-    /* PAYMENT QR CARD */
+    /* PHONEPE PAYMENT & QR CARD */
     .qr-payment-card {
       background: #faf5ff;
       border: 2px dashed #9333ea;
+      border-radius: 0px;
       padding: 14px;
       margin-bottom: 16px;
       display: flex;
@@ -184,38 +222,45 @@
       flex-wrap: wrap;
       gap: 12px;
     }
+
     .qr-info-text {
       font-size: 13px;
       color: #3b0764;
       line-height: 1.6;
     }
+
     .qr-info-text strong {
       color: #581c87;
     }
+
     .qr-box-img {
       text-align: center;
       background: #ffffff;
       padding: 6px;
       border: 1.5px solid #c084fc;
+      border-radius: 0px;
     }
+
     .qr-box-img img {
       width: 110px;
       height: 110px;
       display: block;
       object-fit: contain;
     }
+
     .qr-box-img span {
       font-size: 9px;
       font-weight: 800;
-      color: #6b21a8;
+      color: var(--phonepe-purple);
       display: block;
       margin-top: 2px;
     }
 
-    /* PREVIEW */
+    /* PREVIEW CONTAINER */
     .preview-area {
       background: #f8fafc;
       border: 2px solid #94a3b8;
+      border-radius: 0px;
       padding: 12px;
       font-size: 12.5px;
       line-height: 1.6;
@@ -226,15 +271,16 @@
       overflow-y: auto;
     }
 
-    /* BUTTONS */
+    /* ACTION BUTTONS */
     .action-btn-row {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 10px;
     }
+
     .btn-custom {
       width: 100%;
-      border-radius: 0;
+      border-radius: 0px;
       padding: 13px 8px;
       font-size: 13px;
       font-weight: 900;
@@ -246,16 +292,19 @@
       gap: 6px;
       transition: all 0.1s ease;
     }
+
     .btn-custom-print {
       background: #0f172a;
       color: #ffffff;
-      border: 2px solid #000000;
-      box-shadow: 4px 4px 0px #000000;
+      border: 2px solid var(--primary-black);
+      box-shadow: 4px 4px 0px var(--primary-black);
     }
     .btn-custom-print:hover {
       background: #1e293b;
       transform: translate(1px, 1px);
+      box-shadow: 3px 3px 0px var(--primary-black);
     }
+
     .btn-custom-wa {
       background: #16a34a;
       color: #ffffff;
@@ -263,9 +312,11 @@
       box-shadow: 4px 4px 0px #14532d;
     }
     .btn-custom-wa:hover {
-      background: #15803d;
+      background: var(--success-green);
       transform: translate(1px, 1px);
+      box-shadow: 3px 3px 0px #14532d;
     }
+
     .btn-custom-sms {
       background: #0284c7;
       color: #ffffff;
@@ -275,16 +326,19 @@
     .btn-custom-sms:hover {
       background: #0369a1;
       transform: translate(1px, 1px);
+      box-shadow: 3px 3px 0px #0369a1;
     }
+
     .btn-custom:active {
       transform: translate(3px, 3px);
       box-shadow: none;
     }
 
-    /* PRINT LAYOUT */
+    /* PRINT / PDF STYLING */
     #printInvoiceArea {
       display: none;
     }
+
     @media print {
       body * {
         visibility: hidden;
@@ -395,14 +449,14 @@
 </head>
 <body>
 
+  <!-- BILL BOOK HTML WRAPPER -->
   <div class="bill-wrapper">
-    <!-- HEADER -->
     <div class="bill-header">
       <h1>LUCENT COACHING CENTRE</h1>
-      <div class="inst-sub">Near Mithila Eye Hospital, Musrigharari, Samastipur (Bihar) - 848211[span_7](start_span)[span_7](end_span)</div>
-      <div class="inst-phone">Contact / Helpline: <strong>+91 8789524958</strong>[span_8](start_span)[span_8](end_span)</div>
+      <div class="inst-sub">Near Mithila Eye Hospital, Musrigharari, Samastipur (Bihar) - 848211[span_3](start_span)[span_3](end_span)</div>
+      <div class="inst-phone">Contact / Helpline: <strong>+91 8789524958</strong>[span_4](start_span)[span_4](end_span)</div>
       <div class="leader-row">
-        <div class="leader-badge">Director: <strong>Md Mahfooz Alam</strong>[span_9](start_span)[span_9](end_span)</div>
+        <div class="leader-badge">Director: <strong>Md Mahfooz Alam</strong>[span_5](start_span)[span_5](end_span)</div>
         <div class="leader-badge">Managing Director: <strong>Md Nazir</strong></div>
       </div>
       <div>
@@ -410,12 +464,11 @@
       </div>
     </div>
 
-    <!-- BODY -->
     <div class="bill-body">
-      <!-- 1. Student Selection -->
+      <!-- Row 1: Student Selection -->
       <div class="grid-2">
         <div class="field-box">
-          <label>छात्र चुनें (Dropdown) *</label>
+          <label>छात्र चुनें (Dropdown List) *</label>
           <select id="studentSelect" onchange="onStudentSelectChange()">
             <option value="">-- छात्र का नाम चुनें --</option>
           </select>
@@ -426,7 +479,7 @@
         </div>
       </div>
 
-      <!-- 2. Phone & Class -->
+      <!-- Row 2: Phone & Class -->
       <div class="grid-2">
         <div class="field-box">
           <label>Parents Mobile Number *</label>
@@ -438,7 +491,7 @@
         </div>
       </div>
 
-      <!-- 3. Month & Date -->
+      <!-- Row 3: Month & Bill Date -->
       <div class="grid-2">
         <div class="field-box">
           <label>Fee Month (बिल का महीना) *</label>
@@ -458,12 +511,12 @@
           </select>
         </div>
         <div class="field-box">
-          <label>Bill Date (तारीख) *</label>
+          <label>Bill Date (बिल जारी दिनांक) *</label>
           <input type="date" id="billDate" onchange="calculateBill()">
         </div>
       </div>
 
-      <!-- 4. Fee Inputs -->
+      <!-- Row 4: Math Calculations -->
       <div class="grid-3">
         <div class="field-box">
           <label>Previous Due (पिछला बकाया ₹):</label>
@@ -479,7 +532,7 @@
         </div>
       </div>
 
-      <!-- Math Bar -->
+      <!-- Live Calculation Display -->
       <div class="math-bar">
         <div class="math-desc" id="mathBreakdown">
           विवरण: ₹0 (बकाया) + ₹450 (माह शुल्क) - ₹0 (छूट/अग्रिम)
@@ -490,53 +543,53 @@
         </div>
       </div>
 
-      <!-- PhonePe Details & QR -->
+      <!-- PhonePe QR Code Component -->
       <div class="qr-payment-card">
         <div class="qr-info-text">
           <strong>🟣 PhonePe / UPI भुगतान विवरण:</strong><br>
-          नाम: <b>Md Mahfooz</b>[span_10](start_span)[span_10](end_span)<br>
-          PhonePe No: <b>8789524958</b>[span_11](start_span)[span_11](end_span)[span_12](start_span)[span_12](end_span)<br>
-          UPI ID: <b>8789524958-2@ibl</b>[span_13](start_span)[span_13](end_span)
+          नाम: <b>Md Mahfooz</b>[span_6](start_span)[span_6](end_span)<br>
+          PhonePe No: <b>8789524958</b>[span_7](start_span)[span_7](end_span)[span_8](start_span)[span_8](end_span)<br>
+          UPI ID: <b>8789524958-2@ibl</b>[span_9](start_span)[span_9](end_span)
         </div>
         <div class="qr-box-img">
-          <img src="1000187436.jpg" alt="PhonePe QR" onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=8789524958-2@ibl%26pn=Md%20Mahfooz';">[span_14](start_span)[span_14](end_span)[span_15](start_span)[span_15](end_span)
+          <img src="1000187436.jpg" alt="PhonePe QR" onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=8789524958-2@ibl%26pn=Md%20Mahfooz';">[span_10](start_span)[span_10](end_span)[span_11](start_span)[span_11](end_span)
           <span>SCAN TO PAY</span>
         </div>
       </div>
 
-      <!-- Preview -->
+      <!-- Live Text Preview -->
       <label style="font-size: 11px; font-weight: 800; color: #475569; text-transform: uppercase; margin-bottom: 4px; display: block;">
         बिल मेसेज प्रीव्यू (WhatsApp / SMS):
       </label>
       <div class="preview-area" id="messagePreview"></div>
 
-      <!-- Buttons -->
+      <!-- Output Trigger Buttons -->
       <div class="action-btn-row">
         <button type="button" class="btn-custom btn-custom-print" onclick="printBillPDF()">
-          <span>🖨️</span> प्रिंट / PDF बिल[span_16](start_span)[span_16](end_span)
+          <span>🖨️</span> प्रिंट / PDF बिल[span_12](start_span)[span_12](end_span)
         </button>
         <button type="button" class="btn-custom btn-custom-wa" onclick="sendBillMessage('whatsapp')">
-          <span>💬</span> WhatsApp पर बिल[span_17](start_span)[span_17](end_span)
+          <span>💬</span> WhatsApp पर बिल[span_13](start_span)[span_13](end_span)
         </button>
         <button type="button" class="btn-custom btn-custom-sms" onclick="sendBillMessage('sms')">
-          <span>✉️</span> SMS पर बिल[span_18](start_span)[span_18](end_span)
+          <span>✉️</span> SMS पर बिल[span_14](start_span)[span_14](end_span)
         </button>
       </div>
     </div>
   </div>
 
-  <!-- PRINTABLE TEMPLATE -->
+  <!-- PRINT / PDF BILL TEMPLATE (HIDDEN ON SCREEN) -->
   <div id="printInvoiceArea">
     <div class="paper-invoice">
       <div class="pi-head">
         <h2>LUCENT COACHING CENTRE</h2>
-        <p>Near Mithila Eye Hospital, Musrigharari, Samastipur (Bihar)[span_19](start_span)[span_19](end_span)</p>
-        <p>Contact / Helpline: <strong>+91 8789524958</strong>[span_20](start_span)[span_20](end_span)</p>
+        <p>Near Mithila Eye Hospital, Musrigharari, Samastipur (Bihar)[span_15](start_span)[span_15](end_span)</p>
+        <p>Contact / Helpline: <strong>+91 8789524958</strong>[span_16](start_span)[span_16](end_span)</p>
         <div class="pi-leaders">
-          Director: <strong>Md Mahfooz Alam</strong> | Managing Director: <strong>Md Nazir</strong>[span_21](start_span)[span_21](end_span)
+          Director: <strong>Md Mahfooz Alam</strong> | Managing Director: <strong>Md Nazir</strong>[span_17](start_span)[span_17](end_span)
         </div>
         <div style="font-weight: bold; margin-top: 6px; font-size: 13px; text-transform: uppercase;">
-          ★ आधिकारिक शिक्षण शुल्क बिल (STUDENT FEE INVOICE) ★[span_22](start_span)[span_22](end_span)
+          ★ आधिकारिक शिक्षण शुल्क बिल (STUDENT FEE INVOICE) ★[span_18](start_span)[span_18](end_span)
         </div>
       </div>
 
@@ -581,7 +634,7 @@
       </table>
 
       <div style="font-size: 11px; margin-top: 6px; color: #333;">
-        * ऑनलाइन भुगतान: PhonePe No. <strong>8789524958</strong> (UPI: <strong>8789524958-2@ibl</strong>)[span_23](start_span)[span_23](end_span)
+        * ऑनलाइन भुगतान: PhonePe No. <strong>8789524958</strong> (UPI: <strong>8789524958-2@ibl</strong>)[span_19](start_span)[span_19](end_span)
       </div>
 
       <div class="pi-footer">
@@ -591,8 +644,9 @@
     </div>
   </div>
 
+  <!-- JAVASCRIPT ENGINE -->
   <script>
-    // STUDENT DATA[span_24](start_span)[span_24](end_span)
+    // Complete Verified Students Directory[span_20](start_span)[span_20](end_span)
     const studentsData = [
       { name: "AMJAD ALAM", phone: "9955684664" },
       { name: "ANAMIKA KRI", phone: "7257054499" },
@@ -652,6 +706,7 @@
       { name: "VERSA KRI", phone: "7255032487" }
     ];
 
+    // Calendar me default aaj ki date set karna
     function setDefaultDate() {
       const today = new Date();
       const yyyy = today.getFullYear();
@@ -660,6 +715,7 @@
       document.getElementById('billDate').value = `${yyyy}-${mm}-${dd}`;
     }
 
+    // Date ko DD/MM/YYYY format me convert karna
     function getFormattedSelectedDate() {
       const val = document.getElementById('billDate').value;
       if (!val) return "";
@@ -667,6 +723,7 @@
       return `${p[2]}/${p[1]}/${p[0]}`;
     }
 
+    // Dropdown me bachho ka naam load karna
     function populateDropdown() {
       const select = document.getElementById('studentSelect');
       studentsData.forEach((st, idx) => {
@@ -677,6 +734,7 @@
       });
     }
 
+    // Student select hone par fields auto-fill karna
     function onStudentSelectChange() {
       const select = document.getElementById('studentSelect');
       const val = select.value;
@@ -690,6 +748,7 @@
       calculateBill();
     }
 
+    // Realtime bill math calculation aur message preview generate karna
     function calculateBill() {
       const prev = parseFloat(document.getElementById('prevDues').value) || 0;
       const curr = parseFloat(document.getElementById('currDues').value) || 0;
@@ -714,10 +773,10 @@
 
       const message = 
 `*मासिक शिक्षण शुल्क बिल (FEE BILL)* 📄
-*संस्थान:* LUCENT COACHING CENTRE[span_25](start_span)[span_25](end_span)
-*पता:* Near Mithila Eye Hospital, Musrigharari[span_26](start_span)[span_26](end_span)
-*Helpline:* +91 8789524958[span_27](start_span)[span_27](end_span)
-*Director:* Md Mahfooz Alam | *MD:* Md Nazir[span_28](start_span)[span_28](end_span)
+*संस्थान:* LUCENT COACHING CENTRE[span_21](start_span)[span_21](end_span)
+*पता:* Near Mithila Eye Hospital, Musrigharari[span_22](start_span)[span_22](end_span)
+*Helpline:* +91 8789524958[span_23](start_span)[span_23](end_span)
+*Director:* Md Mahfooz Alam | *MD:* Md Nazir[span_24](start_span)[span_24](end_span)
 
 सादर प्रणाम, आपके बच्चे का मासिक फीस बिल विवरण निम्नलिखित है:
 
@@ -733,18 +792,19 @@ ${discountLine}--------------------------------
 --------------------------------
 
 💳 *ऑनलाइन भुगतान (PhonePe / UPI):*
-• नाम: *Md Mahfooz*[span_29](start_span)[span_29](end_span)
-• PhonePe नंबर: *8789524958*[span_30](start_span)[span_30](end_span)[span_31](start_span)[span_31](end_span)
-• UPI ID: *8789524958-2@ibl*[span_32](start_span)[span_32](end_span)
+• नाम: *Md Mahfooz*[span_25](start_span)[span_25](end_span)
+• PhonePe नंबर: *8789524958*[span_26](start_span)[span_26](end_span)[span_27](start_span)[span_27](end_span)
+• UPI ID: *8789524958-2@ibl*[span_28](start_span)[span_28](end_span)
 *(ऑनलाइन भुगतान के बाद कृपया स्क्रीनशॉट इसी नंबर पर भेजें)*
 
 धन्यवाद,
-*LUCENT COACHING CENTRE MUSRIGHARARI*[span_33](start_span)[span_33](end_span)`;
+*LUCENT COACHING CENTRE MUSRIGHARARI*[span_29](start_span)[span_29](end_span)`;
 
       document.getElementById('messagePreview').innerText = message;
       return { message, netPayable, prev, curr, minus, name, sClass, month, bDate };
     }
 
+    // Print ya PDF save trigger function[span_30](start_span)[span_30](end_span)
     function printBillPDF() {
       const data = calculateBill();
       if (!document.getElementById('studentName').value.trim()) {
@@ -766,6 +826,7 @@ ${discountLine}--------------------------------
       window.print();
     }
 
+    // WhatsApp ya SMS dispatch function[span_31](start_span)[span_31](end_span)
     function sendBillMessage(type) {
       const data = calculateBill();
       let phone = document.getElementById('parentPhone').value.trim();
@@ -787,7 +848,7 @@ ${discountLine}--------------------------------
           waNumber = '91' + waNumber;
         }
         const waURL = `https://wa.me/${waNumber}?text=${encodeURIComponent(data.message)}`;
-        window.open(waURL, '_blank');[span_34](start_span)[span_34](end_span)
+        window.open(waURL, '_blank');[span_32](start_span)[span_32](end_span)
       } else if (type === 'sms') {
         const plainMsg = 
 `फीस बिल (LUCENT COACHING CENTRE):
@@ -796,13 +857,14 @@ ${discountLine}--------------------------------
 दिनांक: ${data.bDate}
 कुल देय बिल: Rs.${data.netPayable}
 PhonePe: 8789524958 (Md Mahfooz)
-हेल्पलाइन: 8789524958[span_35](start_span)[span_35](end_span)[span_36](start_span)[span_36](end_span)[span_37](start_span)[span_37](end_span)`;
+हेल्पलाइन: 8789524958[span_33](start_span)[span_33](end_span)[span_34](start_span)[span_34](end_span)[span_35](start_span)[span_35](end_span)`;
 
         const smsURL = `sms:${cleanPhone}?body=${encodeURIComponent(plainMsg)}`;
-        window.location.href = smsURL;[span_38](start_span)[span_38](end_span)
+        window.location.href = smsURL;[span_36](start_span)[span_36](end_span)
       }
     }
 
+    // Window load par execution trigger
     window.onload = function() {
       setDefaultDate();
       populateDropdown();
