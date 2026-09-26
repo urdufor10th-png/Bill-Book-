@@ -453,10 +453,10 @@
   <div class="bill-wrapper">
     <div class="bill-header">
       <h1>LUCENT COACHING CENTRE</h1>
-      <div class="inst-sub">Near Mithila Eye Hospital, Musrigharari, Samastipur (Bihar) - 848211[span_3](start_span)[span_3](end_span)</div>
-      <div class="inst-phone">Contact / Helpline: <strong>+91 8789524958</strong>[span_4](start_span)[span_4](end_span)</div>
+      <div class="inst-sub">Near Mithila Eye Hospital, Musrigharari, Samastipur (Bihar) - 848211</div>
+      <div class="inst-phone">Contact / Helpline: <strong>+91 8789524958</strong></div>
       <div class="leader-row">
-        <div class="leader-badge">Director: <strong>Md Mahfooz Alam</strong>[span_5](start_span)[span_5](end_span)</div>
+        <div class="leader-badge">Director: <strong>Md Mahfooz Alam</strong></div>
         <div class="leader-badge">Managing Director: <strong>Md Nazir</strong></div>
       </div>
       <div>
@@ -547,12 +547,12 @@
       <div class="qr-payment-card">
         <div class="qr-info-text">
           <strong>🟣 PhonePe / UPI भुगतान विवरण:</strong><br>
-          नाम: <b>Md Mahfooz</b>[span_6](start_span)[span_6](end_span)<br>
-          PhonePe No: <b>8789524958</b>[span_7](start_span)[span_7](end_span)[span_8](start_span)[span_8](end_span)<br>
-          UPI ID: <b>8789524958-2@ibl</b>[span_9](start_span)[span_9](end_span)
+          नाम: <b>Md Mahfooz</b><br>
+          PhonePe No: <b>8789524958</b><br>
+          UPI ID: <b>8789524958-2@ibl</b>
         </div>
         <div class="qr-box-img">
-          <img src="1000187436.jpg" alt="PhonePe QR" onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=8789524958-2@ibl%26pn=Md%20Mahfooz';">[span_10](start_span)[span_10](end_span)[span_11](start_span)[span_11](end_span)
+          <img src="1000187436.jpg" alt="PhonePe QR" onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=8789524958-2@ibl%26pn=Md%20Mahfooz';">
           <span>SCAN TO PAY</span>
         </div>
       </div>
@@ -566,13 +566,13 @@
       <!-- Output Trigger Buttons -->
       <div class="action-btn-row">
         <button type="button" class="btn-custom btn-custom-print" onclick="printBillPDF()">
-          <span>🖨️</span> प्रिंट / PDF बिल[span_12](start_span)[span_12](end_span)
+          <span>🖨️</span> प्रिंट / PDF बिल
         </button>
         <button type="button" class="btn-custom btn-custom-wa" onclick="sendBillMessage('whatsapp')">
-          <span>💬</span> WhatsApp पर बिल[span_13](start_span)[span_13](end_span)
+          <span>💬</span> WhatsApp पर बिल
         </button>
         <button type="button" class="btn-custom btn-custom-sms" onclick="sendBillMessage('sms')">
-          <span>✉️</span> SMS पर बिल[span_14](start_span)[span_14](end_span)
+          <span>✉️</span> SMS पर बिल
         </button>
       </div>
     </div>
@@ -583,13 +583,13 @@
     <div class="paper-invoice">
       <div class="pi-head">
         <h2>LUCENT COACHING CENTRE</h2>
-        <p>Near Mithila Eye Hospital, Musrigharari, Samastipur (Bihar)[span_15](start_span)[span_15](end_span)</p>
-        <p>Contact / Helpline: <strong>+91 8789524958</strong>[span_16](start_span)[span_16](end_span)</p>
+        <p>Near Mithila Eye Hospital, Musrigharari, Samastipur (Bihar)</p>
+        <p>Contact / Helpline: <strong>+91 8789524958</strong></p>
         <div class="pi-leaders">
-          Director: <strong>Md Mahfooz Alam</strong> | Managing Director: <strong>Md Nazir</strong>[span_17](start_span)[span_17](end_span)
+          Director: <strong>Md Mahfooz Alam</strong> | Managing Director: <strong>Md Nazir</strong>
         </div>
         <div style="font-weight: bold; margin-top: 6px; font-size: 13px; text-transform: uppercase;">
-          ★ आधिकारिक शिक्षण शुल्क बिल (STUDENT FEE INVOICE) ★[span_18](start_span)[span_18](end_span)
+          ★ आधिकारिक शिक्षण शुल्क बिल (STUDENT FEE INVOICE) ★
         </div>
       </div>
 
@@ -634,7 +634,7 @@
       </table>
 
       <div style="font-size: 11px; margin-top: 6px; color: #333;">
-        * ऑनलाइन भुगतान: PhonePe No. <strong>8789524958</strong> (UPI: <strong>8789524958-2@ibl</strong>)[span_19](start_span)[span_19](end_span)
+        * ऑनलाइन भुगतान: PhonePe No. <strong>8789524958</strong> (UPI: <strong>8789524958-2@ibl</strong>)
       </div>
 
       <div class="pi-footer">
@@ -646,7 +646,7 @@
 
   <!-- JAVASCRIPT ENGINE -->
   <script>
-    // Complete Verified Students Directory[span_20](start_span)[span_20](end_span)
+    // Complete Verified Students Directory
     const studentsData = [
       { name: "AMJAD ALAM", phone: "9955684664" },
       { name: "ANAMIKA KRI", phone: "7257054499" },
@@ -773,10 +773,10 @@
 
       const message = 
 `*मासिक शिक्षण शुल्क बिल (FEE BILL)* 📄
-*संस्थान:* LUCENT COACHING CENTRE[span_21](start_span)[span_21](end_span)
-*पता:* Near Mithila Eye Hospital, Musrigharari[span_22](start_span)[span_22](end_span)
-*Helpline:* +91 8789524958[span_23](start_span)[span_23](end_span)
-*Director:* Md Mahfooz Alam | *MD:* Md Nazir[span_24](start_span)[span_24](end_span)
+*संस्थान:* LUCENT COACHING CENTRE
+*पता:* Near Mithila Eye Hospital, Musrigharari
+*Helpline:* +91 8789524958
+*Director:* Md Mahfooz Alam | *MD:* Md Nazir
 
 सादर प्रणाम, आपके बच्चे का मासिक फीस बिल विवरण निम्नलिखित है:
 
@@ -792,19 +792,19 @@ ${discountLine}--------------------------------
 --------------------------------
 
 💳 *ऑनलाइन भुगतान (PhonePe / UPI):*
-• नाम: *Md Mahfooz*[span_25](start_span)[span_25](end_span)
-• PhonePe नंबर: *8789524958*[span_26](start_span)[span_26](end_span)[span_27](start_span)[span_27](end_span)
-• UPI ID: *8789524958-2@ibl*[span_28](start_span)[span_28](end_span)
+• नाम: *Md Mahfooz*
+• PhonePe नंबर: *8789524958*
+• UPI ID: *8789524958-2@ibl*
 *(ऑनलाइन भुगतान के बाद कृपया स्क्रीनशॉट इसी नंबर पर भेजें)*
 
 धन्यवाद,
-*LUCENT COACHING CENTRE MUSRIGHARARI*[span_29](start_span)[span_29](end_span)`;
+*LUCENT COACHING CENTRE MUSRIGHARARI*`;
 
       document.getElementById('messagePreview').innerText = message;
       return { message, netPayable, prev, curr, minus, name, sClass, month, bDate };
     }
 
-    // Print ya PDF save trigger function[span_30](start_span)[span_30](end_span)
+    // Print ya PDF save trigger function
     function printBillPDF() {
       const data = calculateBill();
       if (!document.getElementById('studentName').value.trim()) {
@@ -826,7 +826,7 @@ ${discountLine}--------------------------------
       window.print();
     }
 
-    // WhatsApp ya SMS dispatch function[span_31](start_span)[span_31](end_span)
+    // WhatsApp ya SMS dispatch function
     function sendBillMessage(type) {
       const data = calculateBill();
       let phone = document.getElementById('parentPhone').value.trim();
@@ -848,7 +848,7 @@ ${discountLine}--------------------------------
           waNumber = '91' + waNumber;
         }
         const waURL = `https://wa.me/${waNumber}?text=${encodeURIComponent(data.message)}`;
-        window.open(waURL, '_blank');[span_32](start_span)[span_32](end_span)
+        window.open(waURL, '_blank');
       } else if (type === 'sms') {
         const plainMsg = 
 `फीस बिल (LUCENT COACHING CENTRE):
@@ -857,10 +857,10 @@ ${discountLine}--------------------------------
 दिनांक: ${data.bDate}
 कुल देय बिल: Rs.${data.netPayable}
 PhonePe: 8789524958 (Md Mahfooz)
-हेल्पलाइन: 8789524958[span_33](start_span)[span_33](end_span)[span_34](start_span)[span_34](end_span)[span_35](start_span)[span_35](end_span)`;
+हेल्पलाइन: 8789524958`;
 
         const smsURL = `sms:${cleanPhone}?body=${encodeURIComponent(plainMsg)}`;
-        window.location.href = smsURL;[span_36](start_span)[span_36](end_span)
+        window.location.href = smsURL;
       }
     }
 
